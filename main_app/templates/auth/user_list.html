@@ -1,0 +1,27 @@
+{% extends 'base.html' %} 
+{% block content %}
+
+<div class="flex flex-wrap justify-center" style="background-color: #E5E3D7;">
+{% for user in user_list %}
+
+<div class=" thumbnail-container h-25 w-25 ml-3 mr-3 mt-3 mb-3">
+
+  <a href="{% url 'users_detail' user.id %}"> <img src="https://static.wikia.nocookie.net/batmantheanimatedseries/images/f/f1/TU_25_-_I_know_what%27s_good_for_you.jpg/revision/latest/scale-to-width-down/250?cb=20130214081433" class="aspect-auto "></a>
+
+  <div class="h-20 flex items-center justify-items-center" style="background-color: white;">
+    <p class="ml-1 mr-1 mt-1 mb-1">
+      
+    <span class="user-name ">{{user.first_name}}</span> 
+    <span class="user-name ">{{user.last_name}}</span> 
+    <span class="user-name ">{{user.email}}</span>
+    <span class="user-name ">{{user.username}}</span>
+
+
+    
+  </div>
+</div>
+
+{% endfor %} 
+</div>
+
+{% endblock %}

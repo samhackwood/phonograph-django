@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block content %}
+
+<div >
+
+  <h1>Are you sure you want to delete your account? </h1>
+
+  <form action="" method="post">
+
+    {% csrf_token %}
+
+    <input  class="bg-red-400 hover:bg-red-500 text-white font-bold py2 px-4 rounded" type="submit" value="Yes - Delete!!!" >
+    <a  class="bg-blue-500 hover:bg-blue-400 text-white font-bold py2 px-4 rounded" href="{% url 'users_detail' object.id %}">Cancel</a>
+</form>
+
+</div>
+
+ {% endblock %}

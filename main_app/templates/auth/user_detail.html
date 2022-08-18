@@ -1,0 +1,31 @@
+{% extends 'base.html' %} {% block content %}
+
+
+
+
+    <div class="flex-col justify-center">
+        <div class="flex-col justify-center thumbnail-container h-25 w-25 ml-3 mr-3 mt-3 mb-3">
+
+            <a href="{% url 'users_detail' user.id %}"> <img src="https://i.pinimg.com/736x/3f/97/38/3f973871057b3f076e38f5c1413b06e6.jpg" class="aspect-auto "></a>
+          
+            <div class="h-20 flex items-center justify-items-center" style="background-color: white;">
+              <p class="ml-1 mr-1 mt-1 mb-1">
+                
+              <span class="user-name ">{{user.first_name}}</span> 
+              <span class="user-name ">{{user.last_name}}</span> 
+              <span class="user-name ">{{user.email}}</span>
+              <span class="user-name ">{{user.username}}</span>
+                
+          
+              
+            </div>
+          </div>
+      
+        <button class="bg-blue-500 hover:bg-blue-400 text-white font-bold py2 px-4 rounded"><a href="{% url 'users_update' user.id %}">Edit</a></button>
+        <button class="bg-red-400 hover:bg-red-500 text-white font-bold py2 px-4 rounded"><a href="{% url 'users_delete' user.id %}">Delete</a></button>
+        </div>
+        <hr style="border: 1px solid #524f4a" />
+
+
+
+ {% endblock %}
