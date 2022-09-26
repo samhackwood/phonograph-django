@@ -27,10 +27,11 @@
 - Sam Hackwood - [GitHub](https://github.com/samhackwood) | [LinkedIn](https://www.linkedin.com/in/samuel-hackwood-40b050233/)
 
 ### Process
-##### Day 1
-As a first step we started laying out the several connections using ERDs as that helped us to determine which Models were going to be part of the application and how they would interact with each other. We proceeded with creating a Trello board and assigning tasks to each member of the Team and, subsequently, using Figma we created a basic layout on how we would like the application to look like.
 
-The focus for the first day was mainly to create the starting code for this project, creating our first two Models (Record and Tracklist) and adding the User auth functionality. At the end of the day, the User was able to sign-up, login and create/update/delete a Record and while in the record detail page the User was also able to add tracks to that specific record's tracklist.
+Unfortunately, I had missed the previous week of classes due to having COVID and I was advised to catch up on recorded lectures before helping my group. So, I spent the first three days of the project teaching myself Django and chipping in with wireframes and user stories. Fortunately, having previously worked with Express, I knew all the same back-end principles that are at the heart of Django and I picked it up pretty easily. By day four my group was nearly finished with the project and all that was left to do was styling and deployment! I decided therefore that I would continue to work on the project after it was initially submitted so that I could get some real ‘hands-on’ experience with using Django and python. 
+
+Having discussed with my group what added functionality could further develop the site, they suggested that a user profile where the user can edit, update, and delete their accounts would be useful. So, over the course of about, five days, in my spare time, I got to work on the user profile as well as fixing a few bugs here and there. To do this I used the Django user model to display user information, then created the appropriate URLs, HTML pages, and controllers to allow the user to update or delete their information. 
+
 
 ###### Trello
 ![Trello board screenshot picture](/thephonograph/main_app/static/images/Trello%20Screenshot.png)
@@ -42,16 +43,13 @@ The focus for the first day was mainly to create the starting code for this proj
 ###### User Stories
 ![User Stories](/thephonograph/main_app/static/images/User%20Stories.png)
 
-##### Day 2
-During the second day, part of the time was dedicate to edit the sign-up form allowing the User to also input first name, last name and email address alongside the standard username and password. The functionality to allow the User to reset the password was also implemented. Two additional Models were created (Artist and Crate). The User was now allowed to add the favorite Records to its own Crate. The links-display has been amended, now a logged-in User can see and access several more pages compared to a non-logged-in User.
+## Challenges 
 
-##### Day 3
-Several bugs were fixed during the third day, starting from the one that was preventing the Artist's name to show up on the Record's detail page. We have added the functionality to clear a form after submission and the feedback messages after success/fail form submission were now fully functioning.
+The most significant challenge for me during this process was having to go alone without help from my instructors or my team. To get through the project I had to hone my diagnostic skills when  things inevitably went wrong, as well as a lot of help from the Django documentation and Stack Overflow. Though this made the development process quite challenging for me, I began to grow in confidence quickly as I realised that all I needed was a bit of patience and I could solve the majority of issues myself. 
 
-During the afternoon part of the Team started working on the styling for the application and the other part of the time started working on the readme file. 
+Another issue I faced was the limitation due to Django rails. Something that I wanted to implement for the user profile was a profile picture. I later realised however that this was not something that is available in the pre-build user model which Django provides. This meant that if I wanted to implement the profile picture, I would have to completely tear out everything I had done with the user model and start from scratch which would have been far too time consuming for what I wanted to achieve on the app. So, in the end I decided simply to put a placeholder image where the profile picture would be.
 
-##### Day 4
-The Team has been focusing mainly on the styling using Tailwind CSS Library and deploying the app on Heroku.
+
 
 ### Deployed application link
 [The Phonograph](https://hydro-keener-88414.herokuapp.com/)
@@ -62,7 +60,6 @@ As a Team we did find it challenging to fully understand what happens in the bac
 - The password reset email only gets sent to the Terminal at the moment, the link fully works and the functionality fully works, but it would be good to have it as an actual sent email instead. As well, we could implement a verification email to be sent upon registration of a new User.
 - Implement on the homepage a carousel showing the latest record that have been added to the database.
 - Different levels of privileges based on the User type. 
-- User profile page.
 - Make the app fully responsive.
 - Install Tailwind with the config file, rather than just import it via the link, to fully explore how to personalize it.
 - Embed Youtube video related to Artist/Record on the detail pages.
